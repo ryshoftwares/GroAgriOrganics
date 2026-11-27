@@ -338,11 +338,11 @@ html[data-lang="ta"] .hero h1 { font-size: clamp(34px, 5.2vw, 66px); line-height
 .back-label .bl-foot b { color: var(--c); }
 
 /* ---------- Marquee ---------- */
-.marquee { background: linear-gradient(90deg, #0a2e21, #0f3d2c, #0a2e21); border-block: 1px solid rgba(225, 192, 106, .35); overflow: hidden; padding: 18px 0; }
+.marquee { position: relative; background: #e1c06a; border-block: 1px solid var(--gold-600); box-shadow: inset 0 1px 0 rgba(255,255,255,.45), 0 10px 24px -14px rgba(10, 46, 33, .55); overflow: hidden; padding: 16px 0; }
 .marquee-track { display: flex; gap: 0; width: max-content; animation: marquee 40s linear infinite; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
-.marquee-item { display: flex; align-items: center; gap: 22px; padding: 0 26px; font-family: var(--font-display); font-size: 19px; letter-spacing: .1em; color: var(--gold-200); white-space: nowrap; }
-.marquee-item::after { content: "❖"; color: var(--gold-500); font-size: 14px; }
+.marquee-item { display: flex; align-items: center; gap: 22px; padding: 0 26px; font-family: var(--font-display); font-size: 18px; font-weight: 700; letter-spacing: .08em; color: var(--em-950); -webkit-font-smoothing: antialiased; white-space: nowrap; }
+.marquee-item::after { content: "❖"; color: var(--gold-700); font-size: 14px; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 /* ---------- Cards ---------- */
