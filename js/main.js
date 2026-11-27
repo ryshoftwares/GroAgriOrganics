@@ -57,7 +57,7 @@
     var html =
       '<div class="scroll-progress" aria-hidden="true"></div>' +
       '<header class="site-header"><div class="container">' +
-      '<a class="brand" href="index.html" aria-label="GROAGRI ORGANICS – Home"><span class="brand-badge"><img src="images/logo.png" alt="GROAGRI ORGANICS" width="120" height="40"></span></a>' +
+      '<a class="brand" href="index.html" aria-label="GROAGRI ORGANICS – Home"><span class="brand-badge"><img src="images/logo-tight.png" alt="GROAGRI ORGANICS" width="168" height="44"></span></a>' +
       '<nav class="nav" id="site-nav">' + links + "</nav>" +
       '<div class="header-actions">' +
       '<div class="lang-switch" role="group" data-i18n-aria="lang.label">' +
@@ -70,7 +70,7 @@
 
     var footer =
       '<footer class="site-footer"><div class="container footer-grid">' +
-      '<div><a href="index.html" class="brand-badge"><img src="images/logo.png" alt="GROAGRI ORGANICS" style="height:44px;width:auto"></a>' +
+      '<div><a href="index.html" class="brand-badge"><img src="images/logo-tight.png" alt="GROAGRI ORGANICS" style="height:46px;width:auto"></a>' +
       '<p data-i18n="footer.about"></p>' +
       '<div class="socials">' +
       '<a class="s-fb" href="https://www.facebook.com/groagriorganics" target="_blank" rel="noopener" aria-label="Facebook">' + I.fb + '</a>' +

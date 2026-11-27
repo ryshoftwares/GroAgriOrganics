@@ -150,10 +150,10 @@ html[data-lang="ta"] .eyebrow { letter-spacing: .06em; font-size: 13.5px; }
 .site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
 .brand { display: flex; align-items: center; gap: 12px; flex: none; }
 .brand-badge {
-  background: #fff; border-radius: 14px; padding: 6px 12px; display: grid; place-items: center;
+  background: #fff; border-radius: 12px; padding: 5px 8px; display: grid; place-items: center;
   box-shadow: 0 6px 20px -8px rgba(0,0,0,.5), inset 0 0 0 1px rgba(201, 162, 74, .6);
 }
-.brand img { height: 40px; width: auto; }
+.brand img { height: 44px; width: auto; }
 .nav { display: flex; align-items: center; gap: 6px; }
 .nav a.nav-link {
   position: relative; padding: 8px 14px; font-weight: 600; font-size: 15px; color: rgba(247, 236, 198, .86);
@@ -678,8 +678,8 @@ html[data-lang="ta"] .site-footer h4 { letter-spacing: .02em; }
   .range-list { grid-template-columns: 1fr 1fr; gap: 12px; }
   .range-item img { height: 130px; }
   .stage { --w: 150px; }
-  .brand img { height: 32px; }
-  .brand-badge { padding: 5px 9px; border-radius: 11px; }
+  .brand img { height: 34px; }
+  .brand-badge { padding: 4px 6px; border-radius: 10px; }
   .lang-switch button { padding: 5px 9px; }
   .explorer-panel { grid-template-columns: 1fr; text-align: center; padding: 26px; }
   .explorer-panel img { margin: 0 auto; width: 110px; }
