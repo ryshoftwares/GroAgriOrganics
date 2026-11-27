@@ -533,6 +533,15 @@ html[data-lang="ta"] .pd-block h4 { letter-spacing: .02em; }
 .crop-tags a:hover { background: var(--gold-200); }
 .crop-tags img { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; }
 .pd-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.pd-crops { background: var(--cream); }
+.pd-crops .section-head h2 { color: var(--c); }
+.crop-uses { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.crop-use { display: flex; gap: 14px; align-items: flex-start; padding: 14px; background: #fff; border: 1px solid var(--line); border-radius: 16px; transition: transform .3s var(--ease), box-shadow .3s; }
+.crop-use:hover { transform: translateY(-3px); box-shadow: var(--shadow-sm); }
+.crop-use img { flex: none; width: 64px; height: 64px; border-radius: 12px; object-fit: cover; }
+.crop-use h3 { font-size: 17px; color: var(--ink); margin-bottom: 4px; }
+.crop-use p { font-size: 14px; color: var(--ink-2); line-height: 1.5; }
+.viewer .static-pack { height: 360px; width: auto; border-radius: 6px; box-shadow: 0 30px 40px -18px rgba(0,0,0,.7); }
 
 /* ---------- Crop guide ---------- */
 .toolbar { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; margin-bottom: 34px; }

@@ -7,10 +7,10 @@
 var I18N = {
   en: {
     "meta.title.home": "GROAGRI ORGANICS | Liquid Organic Fertilizers – Tamil Nadu",
-    "meta.title.products": "Products | GROAGRI ORGANICS",
-    "meta.title.crops": "Crop Guide | GROAGRI ORGANICS",
-    "meta.title.about": "About | GROAGRI ORGANICS",
-    "meta.title.contact": "Contact | GROAGRI ORGANICS",
+    "meta.title.products": "Liquid Organic Fertilizers – Coco Gold, Root Max, Grovia, LF-21 | GROAGRI ORGANICS",
+    "meta.title.crops": "Crop Guide – Organic Fertilizers for Coconut, Paddy, Vegetables & Flowers | GROAGRI ORGANICS",
+    "meta.title.about": "About GROAGRI ORGANICS – Liquid Organic Fertilizers, Tamil Nadu",
+    "meta.title.contact": "Contact GROAGRI ORGANICS – Prices, Orders & Dealership",
 
     "nav.home": "Home", "nav.products": "Products", "nav.crops": "Crop Guide",
     "nav.about": "About", "nav.contact": "Contact", "nav.menu": "Open menu",
@@ -82,7 +82,7 @@ var I18N = {
     "prod.care": "Customer Care", "prod.web": "Website",
     "prod.crops": "Recommended Crops", "prod.enquire": "Enquire Now", "prod.wa": "Order on WhatsApp",
     "prod.rotate": "Drag to rotate the pack", "prod.front": "Front", "prod.side": "Side", "prod.back": "Back",
-    "prod.method": "Method",
+    "prod.method": "Method", "prod.cropsFor": "How {name} Helps Your Crops", "prod.all": "All Products",
 
     "crops.banner.title": "Crop Guide",
     "crops.banner.lead": "From coconut to flowering plants – the right Groagri product for each crop in this guide.",
@@ -206,7 +206,7 @@ var I18N = {
     "prod.care": "வாடிக்கையாளர் சேவை", "prod.web": "இணையதளம்",
     "prod.crops": "பரிந்துரைக்கப்படும் பயிர்கள்", "prod.enquire": "விசாரிக்கவும்", "prod.wa": "WhatsApp-ல் ஆர்டர் செய்யவும்",
     "prod.rotate": "பாக்கெட்டைச் சுழற்ற இழுக்கவும்", "prod.front": "முன்", "prod.side": "பக்கம்", "prod.back": "பின்",
-    "prod.method": "முறை",
+    "prod.method": "முறை", "prod.cropsFor": "{name} – பயிர் வாரியான பயன்கள்", "prod.all": "அனைத்து தயாரிப்புகள்",
 
     "crops.banner.title": "பயிர் வழிகாட்டி",
     "crops.banner.lead": "தென்னை முதல் பூச்செடி வரை – இந்த வழிகாட்டியில் உள்ள ஒவ்வொரு பயிருக்கும் சரியான க்ரோஅக்ரி தயாரிப்பு.",

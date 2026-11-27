@@ -19,6 +19,10 @@ var COMPANY = {
 var PRODUCTS = [
   {
     id: "coco-gold",
+    seo: {
+      title: "Coco Gold – Organic Liquid Fertilizer for Coconut Trees | GROAGRI ORGANICS",
+      description: "Coco Gold coconut special organic liquid fertilizer reduces button shedding and improves nut set, nut size and yield. 100 ml per litre as soil drench, every 30 days. 1 L pack, ₹850."
+    },
     name: "Coco Gold",
     image: "images/packs/coco-gold.jpg",
     color: "#1f5a2e",
@@ -38,6 +42,10 @@ var PRODUCTS = [
   },
   {
     id: "root-max",
+    seo: {
+      title: "Root Max – Organic Root Growth Promoter Liquid Fertilizer | GROAGRI ORGANICS",
+      description: "Root Max liquid organic root growth promoter for stronger roots, better nutrient uptake and vigorous plants – paddy, banana, vegetables, flowers. 10 ml per litre, every 20 days."
+    },
     name: "Root Max",
     image: "images/packs/root-max.jpg",
     color: "#7a4a1e",
@@ -57,6 +65,10 @@ var PRODUCTS = [
   },
   {
     id: "grovia",
+    seo: {
+      title: "Grovia – Organic Soil & Crop Promoter Liquid Fertilizer | GROAGRI ORGANICS",
+      description: "Grovia liquid organic soil and crop promoter improves soil health, nutrient availability and crop vigour for better yield. 10 ml per litre as soil drench, every 20 days."
+    },
     name: "Grovia",
     image: "images/packs/grovia.jpg",
     color: "#0f5e52",
@@ -76,6 +88,10 @@ var PRODUCTS = [
   },
   {
     id: "lf-21",
+    seo: {
+      title: "LF-21 – Foliar Organic Fertilizer for Flowering & Fruit Set | GROAGRI ORGANICS",
+      description: "LF-21 foliar liquid organic fertilizer for the flowering stage – more flowers, less flower drop, better fruit set and yield. Spray 10 ml per litre, every 15 days."
+    },
     name: "LF-21",
     image: "images/packs/lf-21.jpg",
     color: "#5b2b8f",
@@ -233,6 +249,9 @@ var CROPS = [
     ["lf-21", { en: "Increases the number and size of flowers.", ta: "பூக்களின் எண்ணிக்கையும் அளவும் அதிகரிக்கும்" }]
   ]}
 ];
+
+/* Each product has its own page: coco-gold.html, root-max.html, ... */
+function productUrl(p) { return (typeof p === "string" ? p : p.id) + ".html"; }
 
 function getProduct(id) {
   for (var i = 0; i < PRODUCTS.length; i++) if (PRODUCTS[i].id === id) return PRODUCTS[i];

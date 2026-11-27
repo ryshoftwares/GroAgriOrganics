@@ -81,7 +81,7 @@
       NAV.map(function (n) { return '<li><a href="' + n.href + '" data-i18n="' + n.key + '"></a></li>'; }).join("") +
       "</ul></div>" +
       '<div><h4 data-i18n="footer.products"></h4><ul>' +
-      PRODUCTS.map(function (p) { return '<li><a href="products.html#' + p.id + '">' + esc(p.name) + "</a></li>"; }).join("") +
+      PRODUCTS.map(function (p) { return '<li><a href="' + productUrl(p) + '">' + esc(p.name) + "</a></li>"; }).join("") +
       "</ul></div>" +
       '<div><h4 data-i18n="footer.contact"></h4><ul>' +
       '<li data-i18n-html="contact.addressVal"></li>' +
@@ -251,13 +251,13 @@
       if (drag.wasDrag()) return;
       var slot = e.target.closest(".slot"); if (!slot) return;
       var i = +slot.getAttribute("data-i");
-      if (i === front) location.href = "products.html#" + PRODUCTS[i].id; else goTo(i);
+      if (i === front) location.href = productUrl(PRODUCTS[i]); else goTo(i);
     });
     stage.setAttribute("tabindex", "0");
     stage.addEventListener("keydown", function (e) {
       if (e.key === "ArrowRight") { goTo((front + 1) % 4); e.preventDefault(); }
       if (e.key === "ArrowLeft") { goTo((front + 3) % 4); e.preventDefault(); }
-      if (e.key === "Enter") location.href = "products.html#" + PRODUCTS[front].id;
+      if (e.key === "Enter") location.href = productUrl(PRODUCTS[front]);
     });
     if ("IntersectionObserver" in window) new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }).observe(stage);
     build();
@@ -322,7 +322,7 @@
     var el = $("#range-grid"); if (!el) return;
     el.innerHTML = PRODUCTS.map(function (p, i) {
       return (
-        '<a class="prod-card tilt reveal" style="--c:' + p.color + ";--a:" + p.accent + ";--rd:" + i * 0.08 + 's" href="products.html#' + p.id + '">' +
+        '<a class="prod-card tilt reveal" style="--c:' + p.color + ";--a:" + p.accent + ";--rd:" + i * 0.08 + 's" href="' + productUrl(p) + '">' +
         '<div class="visual"><img src="' + p.image + '" alt="' + esc(p.name) + '" loading="lazy" width="188" height="270"></div>' +
         '<div class="body"><span class="tag">' + esc(p.tag.en) + "</span>" +
         "<h3>" + esc(p.name) + "</h3><p>" + esc(pick(p.type)) + "</p>" +
@@ -348,7 +348,7 @@
       '<div class="chips"><span class="chip">' + (p.method === "foliar" ? I.spray : I.drop) + esc(methodLabel(p)) + "</span>" +
       '<span class="chip">' + esc(p.dose + " ml / 1 L") + "</span>" +
       '<span class="chip">' + I.clock + esc(everyLabel(p)) + "</span></div>" +
-      '<a class="btn btn-dark btn-sm" style="margin-top:18px" href="products.html#' + p.id + '">' + esc(t("range.view")) + I.arrow + "</a></div>";
+      '<a class="btn btn-dark btn-sm" style="margin-top:18px" href="' + productUrl(p) + '">' + esc(t("range.view")) + I.arrow + "</a></div>";
     $all(".hotspot").forEach(function (h) { h.classList.toggle("active", h.getAttribute("data-zone") === zoneNow); });
   }
   function initExplorer() {
@@ -409,13 +409,22 @@
   /* ---------- Products page ---------- */
   function cropsFor(id) { return CROPS.filter(function (c) { return c.rows.some(function (r) { return r[0] === id; }); }); }
 
+  var PRODUCT_ID = document.body.getAttribute("data-product");
+
   function renderProducts() {
     var list = $("#product-list"); if (!list) return;
     var lang = Lang.get();
+    var shown = PRODUCT_ID ? [getProduct(PRODUCT_ID)] : PRODUCTS;
     $("#subnav").innerHTML = PRODUCTS.map(function (p) {
-      return '<a href="#' + p.id + '" style="--c:' + p.color + '"><i></i>' + esc(p.name) + "</a>";
+      var cur = p.id === PRODUCT_ID;
+      return '<a href="' + productUrl(p) + '" style="--c:' + p.color + '"' + (cur ? ' class="active" aria-current="page"' : "") + "><i></i>" + esc(p.name) + "</a>";
     }).join("");
-    list.innerHTML = PRODUCTS.map(function (p) {
+    if (PRODUCT_ID) {
+      var cp = shown[0];
+      document.title = lang === "ta" ? cp.name + " – " + cp.type.ta + " | GROAGRI ORGANICS" : cp.seo.title;
+      var lead = $("#pd-lead"); if (lead) lead.textContent = pick(cp.type);
+    }
+    list.innerHTML = shown.map(function (p) {
       var steps = DIRECTIONS[lang].slice();
       if (p.method === "foliar") steps[1] = DIRECTIONS_FOLIAR[lang];
       var crops = cropsFor(p.id);
@@ -445,17 +454,29 @@
         "<tr><th>" + esc(t("prod.licence")) + "</th><td>" + esc(COMPANY.licence) + "</td></tr>" +
         "<tr><th>" + esc(t("prod.care")) + '</th><td><a href="' + COMPANY.phoneHref + '">' + esc(COMPANY.phone) + "</a></td></tr>" +
         "</tbody></table>" +
+        (PRODUCT_ID ? "" :
         '<div class="pd-block" style="margin-top:28px"><h4>' + esc(t("prod.crops")) + '</h4><div class="crop-tags">' +
         crops.map(function (c) { return '<a href="crop-guide.html#' + c.id + '"><img src="' + c.img + '" alt="" loading="lazy">' + esc(pick(c)) + "</a>"; }).join("") +
-        "</div></div>" +
+        "</div></div>") +
         '<div class="pd-actions"><a class="btn btn-dark" href="contact.html?product=' + encodeURIComponent(p.name) + '">' + esc(t("prod.enquire")) + I.arrow + "</a>" +
         '<a class="btn btn-wa" target="_blank" rel="noopener" href="' + waLink("Hello Groagri Organics, I would like to order " + p.name + " (1 L).") + '">' + I.wa + esc(t("prod.wa")) + "</a></div>" +
-        "</div></div></section>"
+        "</div></div></section>" +
+        (PRODUCT_ID ? cropUsesHTML(p, crops, lang) : "")
       );
     }).join("");
     observeReveals(list);
     $all(".viewer", list).forEach(initViewer);
-    initSubnav();
+  }
+
+  /* Single product page: how the product helps each crop */
+  function cropUsesHTML(p, crops, lang) {
+    return '<section class="section pd-crops" style="--c:' + p.color + '"><div class="container">' +
+      '<div class="section-head"><h2>' + esc(t("prod.cropsFor", { name: p.name })) + "</h2></div>" +
+      '<div class="crop-uses">' + crops.map(function (c) {
+        var row = c.rows.filter(function (r) { return r[0] === p.id; })[0];
+        return '<a class="crop-use" href="crop-guide.html#' + c.id + '"><img src="' + c.img + '" alt="' + esc(c.en) + '" loading="lazy" width="64" height="64">' +
+          "<div><h3>" + esc(c[lang]) + "</h3><p>" + esc(row[1][lang]) + "</p></div></a>";
+      }).join("") + "</div></div></section>";
   }
 
   function initViewer(v) {
@@ -491,16 +512,6 @@
     render(); requestAnimationFrame(loop);
   }
 
-  function initSubnav() {
-    var links = $all("#subnav a"); if (!links.length || !("IntersectionObserver" in window)) return;
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) links.forEach(function (a) { a.classList.toggle("active", a.getAttribute("href") === "#" + en.target.id); });
-      });
-    }, { rootMargin: "-45% 0px -50% 0px" });
-    $all(".product-detail").forEach(function (s) { io.observe(s); });
-  }
-
   /* ---------- Crop guide ---------- */
   var cg = { group: "all", product: "", q: "" };
   function renderCropGuide() {
@@ -528,7 +539,7 @@
         '<div class="names"><b>' + esc(c[lang]) + "</b><small>" + esc(lang === "ta" ? c.en : c.ta) + "</small></div></div>" +
         '<div class="rows">' + c.rows.map(function (r) {
           var p = getProduct(r[0]);
-          return '<div class="crow"><div class="hd"><a class="pbadge" style="--c:' + p.color + '" href="products.html#' + p.id + '">' + esc(p.name) + "</a>" +
+          return '<div class="crow"><div class="hd"><a class="pbadge" style="--c:' + p.color + '" href="' + productUrl(p) + '">' + esc(p.name) + "</a>" +
             '<span class="dose">' + esc(p.dose + (lang === "ta" ? " மி.லி / 1 L · " : " ml / 1 L · ") + t(p.method === "foliar" ? "method.foliar.short" : "method.soil.short") + " · " + t("dose.days", { n: p.interval })) + "</span></div>" +
             "<p>" + esc(r[1][lang]) + "</p></div>";
         }).join("") + "</div></article>"
@@ -560,7 +571,7 @@
   function renderAbout() {
     var el = $("#range-list"); if (!el) return;
     el.innerHTML = PRODUCTS.map(function (p, i) {
-      return '<a class="range-item reveal" style="--c:' + p.color + ";--rd:" + i * 0.08 + 's" href="products.html#' + p.id + '"><img src="' + p.image + '" alt="' + esc(p.name) + '" loading="lazy">' +
+      return '<a class="range-item reveal" style="--c:' + p.color + ";--rd:" + i * 0.08 + 's" href="' + productUrl(p) + '"><img src="' + p.image + '" alt="' + esc(p.name) + '" loading="lazy">' +
         "<b>" + esc(p.name) + "</b><small>" + esc(pick(p.type)) + "</small></a>";
     }).join("");
     observeReveals(el);
@@ -646,8 +657,7 @@
   observeReveals(document);
   bindTilt(document);
 
-  if (PAGE === "products" && location.hash) {
-    var target = document.getElementById(location.hash.slice(1));
-    if (target) setTimeout(function () { target.scrollIntoView({ block: "start" }); }, 80);
+  if (PAGE === "products" && !PRODUCT_ID && location.hash && getProduct(location.hash.slice(1))) {
+    location.replace(productUrl(location.hash.slice(1)));
   }
 })();
