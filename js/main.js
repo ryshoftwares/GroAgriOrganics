@@ -346,32 +346,38 @@
     observeReveals(el); bindTilt(el);
   }
 
-  /* ---------- Home: plant explorer ---------- */
-  var ZONES = { root: { p: "root-max", k: "plant.root" }, soil: { p: "grovia", k: "plant.soil" }, leaf: { p: "lf-21", k: "plant.leaf" }, nut: { p: "coco-gold", k: "plant.nut" } };
-  var zoneNow = "root";
-  function renderExplorer() {
-    var panel = $("#explorer-panel"); if (!panel) return;
-    var z = ZONES[zoneNow], p = getProduct(z.p);
-    panel.style.setProperty("--c", p.color);
-    panel.innerHTML =
-      '<img src="' + p.image + '" alt="' + esc(p.name) + '" loading="lazy">' +
-      '<div class="fade-swap"><div class="zone">' + esc(t(z.k)) + "</div><h3>" + esc(p.name) + '</h3><div class="type">' + esc(pick(p.type)) + "</div>" +
-      "<p>" + esc(pick(p.benefit)) + "</p>" +
-      '<div class="chips"><span class="chip">' + (p.method === "foliar" ? I.spray : I.drop) + esc(methodLabel(p)) + "</span>" +
-      '<span class="chip">' + esc(p.dose + " ml / 1 L") + "</span>" +
-      '<span class="chip">' + I.clock + esc(everyLabel(p)) + "</span></div>" +
-      '<a class="btn btn-dark btn-sm" style="margin-top:18px" href="' + productUrl(p) + '">' + esc(t("range.view")) + I.arrow + "</a></div>";
-    $all(".hotspot").forEach(function (h) { h.classList.toggle("active", h.getAttribute("data-zone") === zoneNow); });
-  }
-  function initExplorer() {
-    if (!$("#explorer-panel")) return;
-    $all(".hotspot").forEach(function (h) {
-      function go() { zoneNow = h.getAttribute("data-zone"); renderExplorer(); }
-      h.addEventListener("click", go);
-      h.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
+  /* ---------- Home: FAQ – only one answer open at a time
+     (native via name="faq"; this covers older browsers) ---------- */
+  function initFaq() {
+    var items = $all("details.faq");
+    items.forEach(function (d) {
+      d.addEventListener("toggle", function () {
+        if (!d.open) return;
+        items.forEach(function (o) { if (o !== d && o.open) o.open = false; });
+      });
     });
-    renderExplorer();
-    Lang.on(renderExplorer);
+  }
+
+  /* ---------- Home: stat count-up ---------- */
+  function initCounters() {
+    var nums = $all("[data-count]"); if (!nums.length) return;
+    function run(el) {
+      var end = +el.getAttribute("data-count"), t0 = null, dur = 1400;
+      if (reduceMotion) { el.textContent = end; return; }
+      function step(ts) {
+        if (t0 === null) t0 = ts;
+        var k = Math.min(1, (ts - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+        el.textContent = Math.round(end * e);
+        if (k < 1) requestAnimationFrame(step);
+      }
+      el.textContent = "0";
+      requestAnimationFrame(step);
+    }
+    if (!("IntersectionObserver" in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { run(en.target); io.unobserve(en.target); } });
+    }, { threshold: 0.6 });
+    nums.forEach(function (el) { io.observe(el); });
   }
 
   /* ---------- Home: dosage calculator ---------- */
@@ -655,7 +661,8 @@
   renderCropStrip(); Lang.on(renderCropStrip);
   initCarousel();
   initParticles();
-  initExplorer();
+  initCounters();
+  initFaq();
   initCalc();
   renderProducts(); Lang.on(renderProducts);
   initCropGuide();
