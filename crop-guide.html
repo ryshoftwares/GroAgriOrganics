@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Crop Guide | GROAGRI ORGANICS</title>
+  <meta name="description" content="Crop-wise recommendations for Coco Gold, Root Max, Grovia and LF-21 – coconut, paddy, banana, maize, vegetables and flowers.">
+  <meta name="theme-color" content="#082a1f">
+  <link rel="icon" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Serif+Tamil:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="crops" data-title="meta.title.crops">
+
+<main>
+  <section class="page-banner">
+    <div class="bg" style="background-image:url(images/crops/grovia-crops.jpg)"></div>
+    <div class="container">
+      <span class="eyebrow" data-i18n="cropsTeaser.title">From Coconut to Flower Gardens</span>
+      <h1 data-i18n="crops.banner.title">Crop Guide</h1>
+      <p data-i18n="crops.banner.lead"></p>
+      <div class="crumbs"><a href="index.html" data-i18n="nav.home">Home</a> / <span data-i18n="nav.crops">Crop Guide</span></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:60px">
+    <div class="container">
+      <div class="toolbar">
+        <label class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input type="search" id="crop-search" data-i18n-ph="crops.search" data-i18n-aria="crops.search" autocomplete="off">
+        </label>
+        <div class="seg" id="group-seg" role="group">
+          <button type="button" data-g="all" data-i18n="crops.all">All crops</button>
+          <button type="button" data-g="field" data-i18n="crops.field">Field crops</button>
+          <button type="button" data-g="plantation" data-i18n="crops.plantation">Plantations</button>
+          <button type="button" data-g="vegetable" data-i18n="crops.vegetable">Vegetables</button>
+          <button type="button" data-g="flower" data-i18n="crops.flower">Flowers</button>
+        </div>
+      </div>
+      <div class="toolbar" style="margin-top:-14px">
+        <div class="seg" id="product-seg" role="group"></div>
+        <button type="button" class="btn btn-line btn-sm print-btn">🖨 Print</button>
+      </div>
+      <div class="result-count" id="crop-count"></div>
+      <div class="crop-grid" id="crop-grid"></div>
+      <p class="empty" id="crop-empty" data-i18n="crops.none">No crops match your search.</p>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="prod.directions">Directions for Use</span>
+        <h2 data-i18n="calc.title">How Much Do I Mix?</h2>
+      </div>
+      <div class="grid grid-2">
+        <div class="pillar reveal" style="text-align:left">
+          <h3 data-i18n="prod.directions" style="margin-bottom:16px"></h3>
+          <ol class="steps" id="guide-steps"></ol>
+        </div>
+        <div class="pillar reveal" style="text-align:left;--rd:.08s">
+          <h3 data-i18n="prod.precautions" style="margin-bottom:16px"></h3>
+          <ul class="warn" id="guide-warn"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script>
+  (function () {
+    function fill() {
+      var l = Lang.get();
+      var steps = DIRECTIONS[l].slice();
+      steps[1] = l === "ta" ? DIRECTIONS_FOLIAR.ta : "Mix the recommended dose in clean water. Spray LF-21 on the leaves.";
+      document.getElementById("guide-steps").innerHTML = steps.map(function (s) { return "<li>" + s + "</li>"; }).join("");
+      document.getElementById("guide-warn").innerHTML = PRECAUTIONS[l].map(function (s) { return "<li>" + s + "</li>"; }).join("");
+    }
+    fill(); Lang.on(fill);
+  })();
+</script>
+</body>
+</html>

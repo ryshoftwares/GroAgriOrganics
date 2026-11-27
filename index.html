@@ -1,211 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GROAGRI ORGANICS | Organic Fertilizers &amp; Bio-fertilizers – Kaniyur</title>
-  <meta name="description" content="GROAGRI ORGANICS, Kaniyur – manufacturer and supplier of organic manures, bio-fertilizers and liquid organic growth promoters for healthier soil and higher yields.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>GROAGRI ORGANICS | Liquid Organic Fertilizers – Tamil Nadu</title>
+  <meta name="description" content="GROAGRI ORGANICS, Tamil Nadu – Coco Gold, Root Max, Grovia and LF-21 liquid organic fertilizers for coconut, field crops, vegetables and flowers.">
+  <meta name="theme-color" content="#082a1f">
+  <meta property="og:title" content="GROAGRI ORGANICS – Grow Better… Naturally">
+  <meta property="og:description" content="Liquid organic fertilizers: Coco Gold, Root Max, Grovia, LF-21.">
+  <meta property="og:image" content="images/banner.jpg">
   <link rel="icon" href="images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Serif+Tamil:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="images/packs/root-max.jpg">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="home" data-title="meta.title.home">
 
-  <div class="topbar">
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <canvas id="particles" aria-hidden="true"></canvas>
     <div class="container">
-      <span class="tb-left">🌱 100% Organic Solutions for Healthy Soil</span>
-      <span>📞 <a href="tel:+918925184969">+91 89251 84969</a> &nbsp;|&nbsp; 📍 Kaniyur</span>
+      <div class="hero-copy">
+        <span class="eyebrow reveal" data-i18n="hero.eyebrow">Groagri Organics · Tamil Nadu</span>
+        <h1 class="reveal" style="--rd:.08s" data-i18n-html="hero.title">Grow Better…<br><em>Naturally</em></h1>
+        <p class="lead reveal" style="--rd:.16s" data-i18n="hero.lead">Liquid organic fertilizers for every stage of your crop.</p>
+        <div class="hero-actions reveal" style="--rd:.24s">
+          <a href="products.html" class="btn btn-gold"><span data-i18n="hero.btn1">Explore Products</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="crop-guide.html" class="btn btn-ghost" data-i18n="hero.btn2">Open Crop Guide</a>
+        </div>
+        <div class="trust-row reveal" style="--rd:.32s">
+          <div class="trust-item"><img src="images/badges/nabl.png" alt="NABL ISO/IEC 17025" width="40" height="40"><span data-i18n="trust.nabl"></span></div>
+          <div class="trust-item"><img src="images/badges/iso.png" alt="ISO 9001:2015" width="40" height="40"><span data-i18n="trust.iso"></span></div>
+          <div class="trust-item"><span class="seal">FCO</span><span><span data-i18n="trust.fco"></span><br>க.எண். உரம்1/95384/2026</span></div>
+        </div>
+      </div>
+
+      <div class="stage reveal" id="stage" style="--rd:.2s" aria-roledescription="carousel" aria-label="Groagri products">
+        <div class="stage-glow"></div>
+        <div class="ring"></div>
+        <div class="pedestal" aria-hidden="true"></div>
+        <div class="stage-caption" aria-live="polite">
+          <div class="name"></div>
+          <div class="type"></div>
+          <div class="hint" data-i18n="hero.drag">Drag to rotate</div>
+          <div class="stage-dots"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORY RIBBON ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item" data-i18n="cat.1"></span><span class="marquee-item" data-i18n="cat.2"></span>
+      <span class="marquee-item" data-i18n="cat.3"></span><span class="marquee-item" data-i18n="cat.4"></span>
+      <span class="marquee-item" data-i18n="tagline"></span>
+      <span class="marquee-item" data-i18n="cat.1"></span><span class="marquee-item" data-i18n="cat.2"></span>
+      <span class="marquee-item" data-i18n="cat.3"></span><span class="marquee-item" data-i18n="cat.4"></span>
+      <span class="marquee-item" data-i18n="tagline"></span>
     </div>
   </div>
 
-  <header class="header">
+  <!-- ============ PILLARS ============ -->
+  <section class="section">
     <div class="container">
-      <a href="index.html" class="logo"><img src="images/logo.png" alt="GROAGRI ORGANICS logo"></a>
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
-      <nav class="nav">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
-        </ul>
-      </nav>
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="pillars.eyebrow">Why Groagri</span>
+        <h2 data-i18n="pillars.title">Four Promises in Every Bottle</h2>
+        <div class="ornament" aria-hidden="true"><svg viewBox="0 0 160 18" fill="none" stroke="currentColor"><path d="M0 9h60M100 9h60"/><path d="M80 1l8 8-8 8-8-8z" fill="currentColor"/><circle cx="66" cy="9" r="2" fill="currentColor"/><circle cx="94" cy="9" r="2" fill="currentColor"/></svg></div>
+      </div>
+      <div class="grid grid-4">
+        <div class="pillar reveal"><div class="medallion"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10M12 20v-9M12 11C12 7 9 5 5 5c0 4 3 6 7 6zM12 11c0-4 3-6 7-6 0 4-3 6-7 6z"/></svg></div><h3 data-i18n="p1.t"></h3><p data-i18n="p1.d"></p></div>
+        <div class="pillar reveal" style="--rd:.08s"><div class="medallion"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V8M12 8c-2-1-3-3-3-5 2 1 3 3 3 5zM12 8c2-1 3-3 3-5-2 1-3 3-3 5zM12 13c-2-1-4-2-4-5 2 1 4 2 4 5zM12 13c2-1 4-2 4-5-2 1-4 2-4 5zM12 18c-2-1-4-2-4-5 2 1 4 2 4 5zM12 18c2-1 4-2 4-5-2 1-4 2-4 5z"/></svg></div><h3 data-i18n="p2.t"></h3><p data-i18n="p2.d"></p></div>
+        <div class="pillar reveal" style="--rd:.16s"><div class="medallion"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14h20M4 18h16M7 22h10M12 14V6M12 9c-2 0-4-1-4-4 2 0 4 1 4 4zM12 8c2 0 4-1 4-4-2 0-4 1-4 4z"/></svg></div><h3 data-i18n="p3.t"></h3><p data-i18n="p3.d"></p></div>
+        <div class="pillar reveal" style="--rd:.24s"><div class="medallion"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 4.5c1 2 0 3.5 1.5 4.5S13 9 13 11s-2 2-2 4 1 3 1 6M20 8c-2 0-3 1-3 3s2 2 2 4"/></svg></div><h3 data-i18n="p4.t"></h3><p data-i18n="p4.d"></p></div>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <div>
-          <span class="eyebrow">Trusted Organic Fertilizers</span>
-          <h1>Grow Healthier Crops with <span>Nature's Nutrition</span></h1>
-          <p>GROAGRI ORGANICS brings farmers premium organic manures, bio-fertilizers and growth promoters that restore soil health, increase yield and protect the environment.</p>
-          <div class="hero-actions">
-            <a href="products.html" class="btn btn-primary">Explore Products →</a>
-            <a href="contact.html" class="btn btn-outline">Get a Quote</a>
-          </div>
-        </div>
-        <div class="hero-art">
-          <div class="circle">
-            <img src="images/products/vermicompost.svg" alt="GroVermi Gold vermicompost pack">
-            <span class="hero-badge b1">🌿 Chemical-free</span>
-            <span class="hero-badge b2">🚜 Farmer-tested</span>
-          </div>
-        </div>
+  <!-- ============ RANGE ============ -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="range.eyebrow">Our Products</span>
+        <h2 data-i18n="range.title">The Groagri Range</h2>
+        <p class="lead" data-i18n="range.lead"></p>
       </div>
-    </section>
-
-    <!-- Features -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Why Choose Us</span>
-          <h2>Better Soil. Better Yield. Better Future.</h2>
-          <p>Every GROAGRI product is made to feed the soil as well as the plant – so your farm stays productive season after season.</p>
-        </div>
-        <div class="grid grid-4">
-          <div class="card reveal">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
-            <h3>100% Organic</h3>
-            <p>Made from natural, plant, animal and microbial sources with no synthetic chemicals.</p>
-          </div>
-          <div class="card reveal">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
-            <h3>Higher Yields</h3>
-            <p>Balanced nutrition and active microbes help crops grow stronger and produce more.</p>
-          </div>
-          <div class="card reveal">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.5-2.5 8-6 8-12V5l-8-3-8 3v5c0 6 2.5 9.5 8 12Z"/><path d="m9 12 2 2 4-4"/></svg></div>
-            <h3>Quality Assured</h3>
-            <p>Every batch is checked for nutrient content, moisture and microbial count.</p>
-          </div>
-          <div class="card reveal">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-            <h3>Expert Guidance</h3>
-            <p>Free advice on dosage, crop schedules and soil improvement from our team.</p>
-          </div>
-        </div>
+      <div class="grid grid-4" id="range-grid"></div>
+      <div style="text-align:center;margin-top:46px" class="reveal">
+        <a href="products.html" class="btn btn-dark"><span data-i18n="range.all">See all product details</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Stats -->
-    <section class="stats">
-      <div class="container">
-        <div class="grid grid-4">
-          <div class="stat"><strong>10+</strong><span>Organic Products</span></div>
-          <div class="stat"><strong>1000+</strong><span>Happy Farmers</span></div>
-          <div class="stat"><strong>25+</strong><span>Crops Supported</span></div>
-          <div class="stat"><strong>100%</strong><span>Natural Inputs</span></div>
-        </div>
+  <!-- ============ PLANT EXPLORER ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="plant.eyebrow"></span>
+        <h2 data-i18n="plant.title">From Root to Bloom</h2>
+        <p class="lead" data-i18n="plant.lead"></p>
       </div>
-    </section>
-
-    <!-- About preview -->
-    <section class="section section-alt">
-      <div class="container split">
-        <div class="split-img reveal"><img src="images/farm.svg" alt="Illustration of healthy green farm fields"></div>
+      <div class="explorer">
         <div class="reveal">
-          <span class="eyebrow">About GROAGRI</span>
-          <h2>Rooted in Kaniyur, Growing with Farmers</h2>
-          <p style="margin-top:14px">GROAGRI ORGANICS was started with a simple belief – healthy soil grows healthy food. We produce and supply organic fertilizers that help farmers move away from harmful chemicals without compromising on yield.</p>
-          <ul class="check-list">
-            <li>Organic manures, bio-fertilizers &amp; liquid tonics</li>
-            <li>Suitable for field crops, plantations and home gardens</li>
-            <li>Fair prices and direct supply to farmers &amp; dealers</li>
-          </ul>
-          <a href="about.html" class="btn btn-dark">Read Our Story</a>
+          <svg class="plant-svg" viewBox="0 0 520 560" role="group" aria-label="Plant explorer">
+            <defs>
+              <linearGradient id="soilG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a2b"/><stop offset="1" stop-color="#2e1d10"/></linearGradient>
+              <linearGradient id="stemG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2e7d32"/><stop offset="1" stop-color="#66bb6a"/></linearGradient>
+              <linearGradient id="leafG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7cc576"/><stop offset="1" stop-color="#1f6e2d"/></linearGradient>
+              <linearGradient id="trunkG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6d4c2f"/><stop offset=".5" stop-color="#a47a4d"/><stop offset="1" stop-color="#5a3c22"/></linearGradient>
+              <radialGradient id="nutG" cx=".35" cy=".35" r=".7"><stop offset="0" stop-color="#b9e27a"/><stop offset="1" stop-color="#3f8f2a"/></radialGradient>
+              <radialGradient id="flowerG" cx=".5" cy=".5" r=".6"><stop offset="0" stop-color="#ffd54f"/><stop offset=".35" stop-color="#ff6f61"/><stop offset="1" stop-color="#c62850"/></radialGradient>
+              <filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-opacity=".25"/></filter>
+            </defs>
+            <!-- soil -->
+            <path d="M0 330 Q130 312 260 330 T520 326 V560 H0Z" fill="url(#soilG)"/>
+            <g fill="#4a3220" opacity=".55"><circle cx="60" cy="400" r="5"/><circle cx="120" cy="470" r="4"/><circle cx="330" cy="420" r="6"/><circle cx="440" cy="500" r="5"/><circle cx="280" cy="520" r="4"/><circle cx="470" cy="380" r="3"/></g>
+            <g stroke="#7cb342" stroke-width="3" stroke-linecap="round"><path d="M20 330l-4-14M30 331l2-16M90 325l-3-12M150 322l4-14M330 328l-4-13M360 327l3-14M480 326l-3-12"/></g>
+            <!-- roots -->
+            <g fill="none" stroke="#e6c99a" stroke-linecap="round" filter="url(#soft)">
+              <path d="M200 332 C198 380 205 420 196 470 C190 500 200 520 198 545" stroke-width="6"/>
+              <path d="M200 360 C175 385 140 395 110 430 C95 448 80 455 62 470" stroke-width="4"/>
+              <path d="M201 365 C225 390 262 400 290 440 C300 455 318 465 336 478" stroke-width="4"/>
+              <path d="M198 420 C170 440 160 470 140 500" stroke-width="3"/>
+              <path d="M199 430 C222 452 236 480 250 515" stroke-width="3"/>
+              <path d="M110 430 C100 460 104 480 96 505M290 440 C305 470 300 490 312 515M150 400 C140 420 130 425 120 450" stroke-width="2"/>
+            </g>
+            <!-- palm -->
+            <path d="M425 332 C430 260 420 190 418 112" stroke="url(#trunkG)" stroke-width="16" fill="none" stroke-linecap="round"/>
+            <g stroke="#6d4c2f" stroke-width="1.5" opacity=".6"><path d="M418 300h16M419 270h15M419 240h14M418 210h14M418 180h13M418 150h13"/></g>
+            <g fill="none" stroke="#2f8a3a" stroke-width="5" stroke-linecap="round">
+              <path d="M418 108 C380 80 340 85 305 110"/><path d="M418 108 C450 70 495 70 515 95"/>
+              <path d="M418 106 C400 60 370 40 340 40"/><path d="M418 106 C440 55 470 40 500 42"/>
+              <path d="M418 110 C395 120 370 145 360 175"/><path d="M418 110 C445 125 470 150 478 180"/>
+            </g>
+            <g stroke="#58b04a" stroke-width="2" opacity=".9">
+              <path d="M330 95l-6-14M350 90l-4-15M370 88l-2-15M390 92l0-14M455 80l2-15M475 76l4-14M495 80l6-12"/>
+              <path d="M360 55l-8-10M380 50l-4-12M460 50l4-12M480 46l8-10M372 150l-12 2M384 135l-12 0M462 135l12 0M472 152l12 2"/>
+            </g>
+            <g filter="url(#soft)"><circle cx="404" cy="122" r="11" fill="url(#nutG)"/><circle cx="424" cy="126" r="11" fill="url(#nutG)"/><circle cx="414" cy="138" r="11" fill="url(#nutG)"/><circle cx="434" cy="114" r="9" fill="url(#nutG)"/></g>
+            <!-- plant stem & leaves -->
+            <path d="M200 332 C198 270 204 210 200 130" stroke="url(#stemG)" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <g fill="url(#leafG)" filter="url(#soft)">
+              <path d="M200 290 C170 270 130 275 110 290 C135 305 175 305 200 290Z"/>
+              <path d="M201 260 C230 236 270 238 292 252 C268 270 228 272 201 260Z"/>
+              <path d="M200 215 C175 192 140 192 122 205 C145 222 178 225 200 215Z"/>
+              <path d="M201 185 C225 165 255 166 272 178 C252 193 222 196 201 185Z"/>
+            </g>
+            <g stroke="#e8f5e9" stroke-width="1.2" opacity=".6" fill="none"><path d="M200 290 C170 288 140 289 112 290M201 260 C232 254 262 252 290 252M200 215 C178 210 150 207 124 205M201 185 C225 180 248 178 270 178"/></g>
+            <g filter="url(#soft)">
+              <g transform="translate(200 112)">
+                <ellipse rx="13" ry="22" fill="url(#flowerG)"/><ellipse rx="13" ry="22" fill="url(#flowerG)" transform="rotate(60)"/><ellipse rx="13" ry="22" fill="url(#flowerG)" transform="rotate(120)"/>
+                <circle r="8" fill="#ffd54f"/>
+              </g>
+              <ellipse cx="236" cy="160" rx="6" ry="10" fill="#e57373" transform="rotate(30 236 160)"/>
+              <ellipse cx="166" cy="172" rx="6" ry="10" fill="#e57373" transform="rotate(-30 166 172)"/>
+            </g>
+            <!-- hotspots -->
+            <g class="hotspot" data-zone="leaf" tabindex="0" role="button" aria-label="LF-21 – leaves and flowers"><circle class="ring-o" cx="200" cy="112" r="16"/><circle class="dot" cx="200" cy="112" r="9"/><text x="226" y="100" data-i18n="plant.leaf">Leaves &amp; Flowers</text></g>
+            <g class="hotspot" data-zone="nut" tabindex="0" role="button" aria-label="Coco Gold – coconut"><circle class="ring-o" cx="418" cy="128" r="16"/><circle class="dot" cx="418" cy="128" r="9"/><text x="380" y="196" data-i18n="plant.nut">Coconut</text></g>
+            <g class="hotspot" data-zone="soil" tabindex="0" role="button" aria-label="Grovia – soil"><circle class="ring-o" cx="330" cy="372" r="16"/><circle class="dot" cx="330" cy="372" r="9"/><text x="352" y="377" data-i18n="plant.soil">Soil</text></g>
+            <g class="hotspot" data-zone="root" tabindex="0" role="button" aria-label="Root Max – roots"><circle class="ring-o" cx="198" cy="455" r="16"/><circle class="dot" cx="198" cy="455" r="9"/><text x="222" y="460" data-i18n="plant.root">Roots</text></g>
+          </svg>
         </div>
-      </div>
-    </section>
-
-    <!-- Featured products -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Our Products</span>
-          <h2>Popular Organic Fertilizers</h2>
-          <p>From soil conditioners to quick-acting liquid tonics – everything your crop needs, naturally.</p>
-        </div>
-        <div class="grid grid-3" id="featured-products"></div>
-        <div style="text-align:center;margin-top:40px">
-          <a href="products.html" class="btn btn-primary">View All 10 Products →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process -->
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">How It Works</span>
-          <h2>Simple Steps to a Healthier Farm</h2>
-        </div>
-        <div class="grid grid-4">
-          <div class="card value-card reveal"><div class="icon"><b>1</b></div><h3>Tell Us Your Crop</h3><p>Share your crop, soil type and acreage with our team.</p></div>
-          <div class="card value-card reveal"><div class="icon"><b>2</b></div><h3>Get a Plan</h3><p>We recommend the right product mix and dosage.</p></div>
-          <div class="card value-card reveal"><div class="icon"><b>3</b></div><h3>Fast Delivery</h3><p>Products delivered to your farm or nearest dealer.</p></div>
-          <div class="card value-card reveal"><div class="icon"><b>4</b></div><h3>See Results</h3><p>Healthier soil, greener crops and better harvests.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section">
-      <div class="container">
-        <div class="cta-band reveal">
-          <div>
-            <h2>Ready to Go Organic?</h2>
-            <p>Call us today for product prices, bulk orders and dealership enquiries.</p>
-          </div>
-          <a href="tel:+918925184969" class="btn btn-primary">📞 Call 89251 84969</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <a href="index.html" class="footer-logo"><img src="images/logo.png" alt="GROAGRI ORGANICS"></a>
-        <p>Premium organic fertilizers and bio-fertilizers for healthy soil, healthy crops and a healthy planet.</p>
-      </div>
-      <div>
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Products</h4>
-        <ul>
-          <li><a href="products.html#grovermi-gold">Vermicompost</a></li>
-          <li><a href="products.html#neemshield">Neem Cake</a></li>
-          <li><a href="products.html#bio-npk">Bio NPK</a></li>
-          <li><a href="products.html#seagro">Seaweed Extract</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul>
-          <li>📍 No. 02, Puthurmadam, Karatholuvu Road, Kaniyur</li>
-          <li>📞 <a href="tel:+918925184969">+91 89251 84969</a></li>
-          <li>🕘 Mon – Sat: 9:00 AM – 6:00 PM</li>
-        </ul>
+        <div class="explorer-panel reveal" id="explorer-panel" aria-live="polite"></div>
       </div>
     </div>
-    <div class="footer-bottom">© <span id="year">2026</span> GROAGRI ORGANICS. All rights reserved.</div>
-  </footer>
+  </section>
 
-  <a href="https://wa.me/918925184969" class="float-call" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.8.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2zm0 18.3c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.3 8.3 0 1 1 12 20.3z"/></svg>
-  </a>
+  <!-- ============ CALCULATOR ============ -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="calc.eyebrow">Smart Dosage Calculator</span>
+        <h2 style="color:#fbf6e6" data-i18n="calc.title">How Much Do I Mix?</h2>
+        <p class="lead" data-i18n="calc.lead"></p>
+      </div>
+      <div class="calc reveal" id="calc">
+        <div class="calc-form">
+          <label class="lbl" data-i18n="calc.product">Product</label>
+          <div class="prod-pick"></div>
+          <label class="lbl" for="calc-l" data-i18n="calc.water">Water (litres)</label>
+          <div class="range-row">
+            <input type="range" min="1" max="500" step="1" value="15" aria-label="Water (litres)">
+            <input type="number" id="calc-l" min="1" max="1000" value="15" inputmode="numeric">
+          </div>
+          <div class="quick"><span data-i18n="calc.tank">Quick picks</span>
+            <button type="button" data-l="1">1 L</button><button type="button" data-l="10">10 L</button>
+            <button type="button" data-l="15">15 L</button><button type="button" data-l="100">100 L</button><button type="button" data-l="200">200 L</button>
+          </div>
+        </div>
+        <div class="calc-out" aria-live="polite">
+          <div class="k" data-i18n="calc.need">You need</div>
+          <div class="big"></div>
+          <div class="sub"></div>
+          <div class="meta"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script src="js/products.js"></script>
-  <script src="js/main.js"></script>
+  <!-- ============ CROPS ============ -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="cropsTeaser.eyebrow">Crop Guide</span>
+        <h2 data-i18n="cropsTeaser.title">From Coconut to Flower Gardens</h2>
+        <p class="lead" data-i18n="cropsTeaser.lead"></p>
+      </div>
+    </div>
+    <div class="crop-strip marquee-host" id="crop-strip"></div>
+    <div style="text-align:center;margin-top:46px" class="reveal">
+      <a href="crop-guide.html" class="btn btn-dark"><span data-i18n="cropsTeaser.btn">Open the full Crop Guide</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </section>
+
+  <!-- ============ QUALITY ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="quality.eyebrow">Quality &amp; Compliance</span>
+        <h2 data-i18n="quality.title">Clearly Labelled. Properly Licensed.</h2>
+      </div>
+      <div class="quality-grid">
+        <div class="q-card reveal"><img src="images/badges/nabl.png" alt="NABL ISO/IEC 17025" loading="lazy"><div><small>NABL</small><b data-i18n="trust.nabl"></b></div></div>
+        <div class="q-card reveal" style="--rd:.08s"><img src="images/badges/iso.png" alt="ISO 9001:2015" loading="lazy"><div><small>ISO</small><b data-i18n="trust.iso"></b></div></div>
+        <div class="q-card reveal" style="--rd:.16s"><span class="seal-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.5-2.5 8-6 8-12V5l-8-3-8 3v5c0 6 2.5 9.5 8 12Z"/><path d="m9 12 2 2 4-4"/></svg></span><div><small data-i18n="prod.licence">FCO Licence No.</small><b>க.எண். உரம்1/95384/2026</b></div></div>
+        <div class="q-card reveal" style="--rd:.24s"><span class="seal-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20V9l-6 4V9l-6 4V4H2z"/></svg></span><div><small data-i18n="prod.mfgBy">Manufactured by</small><b>Mazhaithuli Organics</b></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta-royal reveal">
+        <div>
+          <span class="eyebrow" data-i18n="slogan">Grow Better… Naturally</span>
+          <h2 data-i18n="cta.title">Ready to Grow Better?</h2>
+          <p data-i18n="cta.lead"></p>
+        </div>
+        <div class="actions">
+          <a href="tel:+918925184969" class="btn btn-gold"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span data-i18n="cta.call">Call +91 89251 84969</span></a>
+          <a href="https://wa.me/918925184969" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="cta.wa">WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
