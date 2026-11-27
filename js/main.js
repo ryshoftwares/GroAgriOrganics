@@ -200,10 +200,14 @@
     var angle = 0, vel = 0, target = null, dragging = false, hover = false, visible = true, front = -1;
     var AUTO = reduceMotion ? 0 : -0.12;
 
+    var slots = [], W = 196, spread = 1;
+    function measure() { W = ring.offsetWidth || 196; spread = W < 170 ? 0.84 : 1; }
     function build() {
       ring.innerHTML = PRODUCTS.map(function (p, i) {
-        return '<div class="slot" data-i="' + i + '" style="transform:rotateY(' + i * 90 + 'deg) translateZ(var(--r))"><div class="float">' + packHTML(p) + "</div></div>";
+        return '<div class="slot" data-i="' + i + '"><div class="float">' + packHTML(p) + "</div></div>";
       }).join("");
+      slots = $all(".slot", ring);
+      measure();
       dots.innerHTML = PRODUCTS.map(function (p, i) { return '<button type="button" aria-label="' + esc(p.name) + '" data-i="' + i + '"></button>'; }).join("");
       $all("button", dots).forEach(function (b) {
         b.addEventListener("click", function () { goTo(+b.getAttribute("data-i")); });
@@ -216,11 +220,18 @@
       target = base + k * 360;
     }
     function render() {
-      ring.style.transform = "rotateX(-7deg) rotateY(" + angle.toFixed(2) + "deg)";
       var idx = ((Math.round(-angle / 90) % 4) + 4) % 4;
-      $all(".pack", ring).forEach(function (pk, i) {
+      // Coverflow layout: front pack centred, neighbours turned toward it, back pack faded out.
+      slots.forEach(function (s, i) {
         var rel = ((i * 90 + angle) % 360 + 540) % 360 - 180;
-        pk.style.setProperty("--shine", (50 + rel * 1.2) + "%");
+        var t = rel / 90, a = Math.abs(t), c = Math.max(-1, Math.min(1, t));
+        var x = (a <= 1 ? t : (t < 0 ? -1 : 1) * (1 + (a - 1) * 0.5)) * W * spread;
+        var z = -Math.min(a, 1.6) * W * 0.8;
+        var o = a <= 1 ? 1 : Math.max(0, 1 - (a - 1) / 0.55);
+        s.style.transform = "translate3d(" + x.toFixed(1) + "px,0," + z.toFixed(1) + "px) rotateY(" + (-c * 34).toFixed(2) + "deg)";
+        s.style.setProperty("--o", o.toFixed(3));
+        s.style.pointerEvents = o < 0.2 ? "none" : "";
+        s.firstChild.firstChild.style.setProperty("--shine", (50 + rel * 1.2) + "%");
       });
       if (idx !== front) {
         front = idx;
@@ -262,6 +273,7 @@
     if ("IntersectionObserver" in window) new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }).observe(stage);
     build();
     Lang.on(build);
+    addEventListener("resize", measure);
     requestAnimationFrame(loop);
   }
 
