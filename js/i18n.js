@@ -33,7 +33,7 @@ var I18N = {
     "cat.1": "Plant Promoters", "cat.2": "Organic Growth Enhancers",
     "cat.3": "Soil & Crop Enhancers", "cat.4": "Leaf Feeds",
 
-    "pillars.eyebrow": "Why Groagri",
+    "pillars.eyebrow": "Why Groagri Organics",
     "pillars.title": "What We Work Towards",
     "p1.t": "Healthy Plants", "p1.d": "Root Max supports root development, nutrient uptake and vigorous plant growth.",
     "p2.t": "Better Yield", "p2.d": "LF-21 promotes flowering, fruit set and yield, keeping leaves green and healthy.",
@@ -96,10 +96,10 @@ var I18N = {
     "about.banner.title": "About Groagri Organics",
     "about.banner.lead": "Nourishing crops. Nurturing growth.",
     "about.eyebrow": "Who We Are",
-    "about.title": "Organic Nutrition for Tamil Nadu Farms",
-    "about.p1": "Groagri Organics, Tamil Nadu, markets a focused range of liquid organic fertilizers – Coco Gold, Root Max, Grovia and LF-21 – made to support crops from the roots to the flowers.",
-    "about.p2": "Our products are manufactured by Mazhaithuli Organics under FCO Licence No. க.எண். உரம்1/95384/2026 and carry complete usage directions and precautions in Tamil and English on every pack.",
-    "about.range": "Our Range",
+    "about.title": "Organic Fertilizers for Healthier Farms",
+    "about.p1": "Groagri Organics is an organic fertilizer company that helps farmers grow healthy crops the natural way. Good harvests start with healthy soil – so our products feed your crops while protecting your land.",
+    "about.p2": "We work closely with farmers to offer organic fertilizers that are simple to use, reliable in quality and come with clear guidance, so you get better results every season.",
+    "about.range": "Our Range of Products",
     "about.promise": "What We Work Towards",
 
     "contact.banner.title": "Contact Us",
@@ -122,7 +122,7 @@ var I18N = {
     "form.note": "Your enquiry opens in WhatsApp, addressed to our team at +91 89251 84969.",
     "form.success": "✓ Thank you! Please press Send in WhatsApp to complete your enquiry.",
 
-    "footer.about": "Liquid organic fertilizers for healthy plants, better yield, fertile soil and a greener tomorrow.",
+    "footer.about": "Organic fertilizers for healthy plants, better yield, fertile soil and a greener tomorrow.",
     "footer.links": "Quick Links", "footer.products": "Products", "footer.contact": "Contact",
     "footer.rights": "All rights reserved.",
     "footer.scan": "Scan to visit"
@@ -156,7 +156,7 @@ var I18N = {
     "cat.1": "தாவர ஊக்கிகள்", "cat.2": "ஆர்கானிக் வளர்ச்சி ஊக்கிகள்",
     "cat.3": "மண் மற்றும் பயிர் ஊக்கிகள்", "cat.4": "இலை வழி உரங்கள்",
 
-    "pillars.eyebrow": "ஏன் க்ரோஅக்ரி",
+    "pillars.eyebrow": "ஏன் க்ரோஅக்ரி ஆர்கானிக்ஸ்",
     "pillars.title": "எங்கள் இலக்கு",
     "p1.t": "ஆரோக்கியமான செடிகள்", "p1.d": "Root Max – வேர் வளர்ச்சி மேம்பட, பயிர்கள் செழிப்பாக வளர, செடி வலுவாக இருக்க.",
     "p2.t": "சிறந்த மகசூல்", "p2.d": "LF-21 – பூக்கள் அதிகம் பூக்க, பூ உதிர்வு குறைய, காய் பிடிப்பு மற்றும் மகசூல் மேம்பட.",
@@ -219,9 +219,9 @@ var I18N = {
     "about.banner.title": "க்ரோஅக்ரி ஆர்கானிக்ஸ் பற்றி",
     "about.banner.lead": "பயிர்களுக்கு ஊட்டம். வளர்ச்சிக்கு ஆதாரம்.",
     "about.eyebrow": "நாங்கள் யார்",
-    "about.title": "தமிழ்நாட்டு விவசாயத்திற்கான ஆர்கானிக் ஊட்டம்",
-    "about.p1": "தமிழ்நாட்டைச் சேர்ந்த க்ரோஅக்ரி ஆர்கானிக்ஸ், வேர் முதல் பூ வரை பயிர்களுக்கு உதவும் திரவ ஆர்கானிக் உரங்களை – Coco Gold, Root Max, Grovia மற்றும் LF-21 – சந்தைப்படுத்துகிறது.",
-    "about.p2": "எங்கள் தயாரிப்புகள் மழைத்துளி ஆர்கானிக்ஸ் (Mazhaithuli Organics) நிறுவனத்தால் உரிமம் எண் க.எண். உரம்1/95384/2026-ன் கீழ் உற்பத்தி செய்யப்படுகின்றன. ஒவ்வொரு பாக்கெட்டிலும் பயன்படுத்தும் முறை மற்றும் முன்னெச்சரிக்கைகள் தமிழ் மற்றும் ஆங்கிலத்தில் அச்சிடப்பட்டுள்ளன.",
+    "about.title": "ஆரோக்கியமான விவசாயத்திற்கான ஆர்கானிக் உரங்கள்",
+    "about.p1": "க்ரோஅக்ரி ஆர்கானிக்ஸ், இயற்கை முறையில் ஆரோக்கியமான பயிர்களை வளர்க்க விவசாயிகளுக்கு உதவும் ஒரு ஆர்கானிக் உர நிறுவனம். நல்ல விளைச்சல் ஆரோக்கியமான மண்ணிலிருந்தே தொடங்குகிறது – எனவே எங்கள் தயாரிப்புகள் பயிருக்கு ஊட்டம் தருவதோடு உங்கள் நிலத்தையும் பாதுகாக்கின்றன.",
+    "about.p2": "விவசாயிகளுடன் நெருக்கமாக இணைந்து, எளிதாகப் பயன்படுத்தக்கூடிய, நம்பகமான தரமுள்ள ஆர்கானிக் உரங்களைத் தெளிவான வழிகாட்டுதலுடன் வழங்குகிறோம் – ஒவ்வொரு பருவத்திலும் நல்ல பலன் பெற.",
     "about.range": "எங்கள் தயாரிப்பு வரிசை",
     "about.promise": "எங்கள் இலக்கு",
 
@@ -245,7 +245,7 @@ var I18N = {
     "form.note": "உங்கள் விசாரணை WhatsApp-ல் +91 89251 84969 எண்ணுக்கு திறக்கும்.",
     "form.success": "✓ நன்றி! விசாரணையை முடிக்க WhatsApp-ல் Send அழுத்தவும்.",
 
-    "footer.about": "ஆரோக்கியமான செடிகள், சிறந்த மகசூல், வளமான மண் மற்றும் பசுமையான நாளைக்கான திரவ ஆர்கானிக் உரங்கள்.",
+    "footer.about": "ஆரோக்கியமான செடிகள், சிறந்த மகசூல், வளமான மண் மற்றும் பசுமையான நாளைக்கான ஆர்கானிக் உரங்கள்.",
     "footer.links": "இணைப்புகள்", "footer.products": "தயாரிப்புகள்", "footer.contact": "தொடர்புக்கு",
     "footer.rights": "அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
     "footer.scan": "ஸ்கேன் செய்யவும்"

@@ -34,6 +34,9 @@
     plant: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10M12 20v-9M12 11C12 7 9 5 5 5c0 4 3 6 7 6zM12 11c0-4 3-6 7-6 0 4-3 6-7 6z"/></svg>',
     wheat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V8M12 8c-2-1-3-3-3-5 2 1 3 3 3 5zM12 8c2-1 3-3 3-5-2 1-3 3-3 5zM12 13c-2-1-4-2-4-5 2 1 4 2 4 5zM12 13c2-1 4-2 4-5-2 1-4 2-4 5zM12 18c-2-1-4-2-4-5 2 1 4 2 4 5zM12 18c2-1 4-2 4-5-2 1-4 2-4 5z"/></svg>',
     soil: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14h20M4 18h16M7 22h10M12 14V6M12 9c-2 0-4-1-4-4 2 0 4 1 4 4zM12 8c2 0 4-1 4-4-2 0-4 1-4 4z"/></svg>',
+    fb: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="#fff"/><path fill="#1877F2" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>',
+    ig: '<svg viewBox="0 0 24 24"><defs><radialGradient id="igGrad" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".05" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><rect width="24" height="24" rx="6.5" fill="url(#igGrad)"/><rect x="5" y="5" width="14" height="14" rx="4.2" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="3.4" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="16.3" cy="7.7" r="1" fill="#fff"/></svg>',
+    yt: '<svg viewBox="0 0 34 24"><path fill="#FF0000" d="M33.3 3.75A4.27 4.27 0 0 0 30.3.73C27.65 0 17 0 17 0S6.35 0 3.7.73A4.27 4.27 0 0 0 .7 3.75C0 6.42 0 12 0 12s0 5.58.7 8.25a4.27 4.27 0 0 0 3 3.02C6.35 24 17 24 17 24s10.65 0 13.3-.73a4.27 4.27 0 0 0 3-3.02C34 17.58 34 12 34 12s0-5.58-.7-8.25z"/><path fill="#fff" d="M13.6 17.1V6.9l8.9 5.1z"/></svg>',
     earth: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 4.5c1 2 0 3.5 1.5 4.5S13 9 13 11s-2 2-2 4 1 3 1 6M20 8c-2 0-3 1-3 3s2 2 2 4"/></svg>'
   };
 
@@ -69,7 +72,11 @@
       '<footer class="site-footer"><div class="container footer-grid">' +
       '<div><a href="index.html" class="brand-badge"><img src="images/logo.png" alt="GROAGRI ORGANICS" style="height:44px;width:auto"></a>' +
       '<p data-i18n="footer.about"></p>' +
-      '<div class="qr"><img src="images/qr.png" alt="QR code" width="82" height="82" loading="lazy"><small data-i18n="footer.scan"></small></div></div>' +
+      '<div class="socials">' +
+      '<a class="s-fb" href="https://www.facebook.com/groagriorganics" target="_blank" rel="noopener" aria-label="Facebook">' + I.fb + '</a>' +
+      '<a class="s-ig" href="https://www.instagram.com/groagriorganics" target="_blank" rel="noopener" aria-label="Instagram">' + I.ig + '</a>' +
+      '<a class="s-yt" href="https://www.youtube.com/@groagriorganics" target="_blank" rel="noopener" aria-label="YouTube">' + I.yt + '</a>' +
+      '</div></div>' +
       '<div><h4 data-i18n="footer.links"></h4><ul>' +
       NAV.map(function (n) { return '<li><a href="' + n.href + '" data-i18n="' + n.key + '"></a></li>'; }).join("") +
       "</ul></div>" +
