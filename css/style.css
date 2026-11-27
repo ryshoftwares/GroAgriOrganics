@@ -460,18 +460,6 @@ html[data-lang="ta"] .calc label.lbl { letter-spacing: .02em; }
 .q-card small { display: block; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-600); font-weight: 800; }
 .q-card b { font-size: 15px; color: var(--em-800); line-height: 1.4; display: block; }
 
-/* ---------- CTA ---------- */
-.cta-royal {
-  position: relative; border-radius: 34px; padding: clamp(40px, 6vw, 70px); overflow: hidden; color: #fff;
-  background: var(--em-grad); box-shadow: var(--shadow-lg);
-  display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: center;
-}
-.cta-royal::before { content: ""; position: absolute; inset: 12px; border-radius: 24px; border: 1px solid rgba(225, 192, 106, .45); pointer-events: none; }
-.cta-royal::after { content: ""; position: absolute; width: 420px; height: 420px; right: -120px; top: -160px; border-radius: 50%; background: radial-gradient(closest-side, rgba(225, 192, 106, .3), transparent); }
-.cta-royal h2 { color: #fbf6e6; }
-.cta-royal p { color: rgba(238, 244, 239, .8); margin-top: 10px; }
-.cta-royal .actions { display: flex; flex-wrap: wrap; gap: 12px; position: relative; z-index: 1; }
-
 /* ---------- Page banner ---------- */
 .page-banner {
   position: relative; padding: calc(var(--header-h) + 80px) 0 90px; color: #fff; overflow: hidden; text-align: center;
@@ -666,8 +654,6 @@ html[data-lang="ta"] .site-footer h4 { letter-spacing: .02em; }
   .viewer { position: relative; top: 0; height: 500px; }
   .calc { grid-template-columns: 1fr; }
   .calc-out { border-left: 0; border-top: 1px solid rgba(225, 192, 106, .25); }
-  .cta-royal { grid-template-columns: 1fr; text-align: center; }
-  .cta-royal .actions { justify-content: center; }
   .grid-3 { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 680px) {

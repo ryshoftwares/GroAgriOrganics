@@ -67,10 +67,6 @@ var I18N = {
     "quality.eyebrow": "Quality & Compliance",
     "quality.title": "Clearly Labelled. Properly Licensed.",
 
-    "cta.title": "Ready to Grow Better?",
-    "cta.lead": "Call or WhatsApp us for prices, bulk orders and dealership enquiries.",
-    "cta.call": "Call +91 89251 84969", "cta.wa": "WhatsApp Us",
-
     "method.soil": "Soil drench", "method.foliar": "Foliar spray",
     "method.soil.short": "Root zone", "method.foliar.short": "On leaves",
     "dose.per": "in 1 L water", "dose.every": "Once every {n} days", "dose.days": "{n} days",
@@ -193,10 +189,6 @@ var I18N = {
 
     "quality.eyebrow": "தரம் & உரிமம்",
     "quality.title": "தெளிவான லேபிள். முறையான உரிமம்.",
-
-    "cta.title": "சிறப்பாக வளர தயாரா?",
-    "cta.lead": "விலை, மொத்த ஆர்டர் மற்றும் டீலர்ஷிப் விவரங்களுக்கு அழைக்கவும் அல்லது WhatsApp செய்யவும்.",
-    "cta.call": "அழைக்க +91 89251 84969", "cta.wa": "WhatsApp செய்யவும்",
 
     "method.soil": "வேர் வழி", "method.foliar": "இலை வழி தெளிப்பு",
     "method.soil.short": "வேர் வழி", "method.foliar.short": "இலை வழி",
