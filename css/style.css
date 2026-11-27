@@ -512,6 +512,9 @@ html[data-lang="ta"] .calc label.lbl { letter-spacing: .02em; }
 .page-banner h1 { font-size: clamp(40px, 6vw, 76px); color: #fbf6e6; }
 html[data-lang="ta"] .page-banner h1 { font-size: clamp(32px, 4.6vw, 56px); }
 .page-banner p { color: rgba(238, 244, 239, .82); max-width: 640px; margin: 14px auto 0; font-size: 18px; }
+@media (min-width: 900px) {
+  body[data-page="crops"] .page-banner p { max-width: none; white-space: nowrap; }
+}
 .crumbs { margin-top: 22px; font-size: 14px; color: var(--gold-300); }
 .crumbs a { color: rgba(247, 236, 198, .8); }
 .crumbs a:hover { color: #fff; }
@@ -609,7 +612,6 @@ html[data-lang="ta"] .pd-block h4 { letter-spacing: .02em; }
 .crow .dose { font-size: 12.5px; color: var(--muted); font-weight: 600; }
 .crow p { font-size: 14.5px; font-weight: 600; color: var(--ink); line-height: 1.5; }
 .empty { text-align: center; padding: 60px 0; color: var(--muted); display: none; }
-.print-btn { margin-left: auto; }
 
 /* ---------- About ---------- */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 6vw, 80px); align-items: center; }
@@ -743,7 +745,6 @@ html[data-lang="ta"] .site-footer h4 { letter-spacing: .02em; }
   .prod-card { min-height: 0; }
   .facts li { flex-direction: column; gap: 2px; }
   .float-wa { width: 54px; height: 54px; right: 16px; bottom: 16px; }
-  .print-btn { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

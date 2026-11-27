@@ -85,7 +85,7 @@ var I18N = {
     "prod.method": "Method", "prod.cropsFor": "How {name} Helps Your Crops", "prod.all": "All Products",
 
     "crops.banner.title": "Crop Guide",
-    "crops.banner.lead": "From coconut to flowering plants – the right Groagri product for each crop in this guide.",
+    "crops.banner.lead": "The right Groagri product for each crop in this guide.",
     "crops.search": "Search a crop…",
     "crops.all": "All crops", "crops.field": "Field crops", "crops.plantation": "Plantations",
     "crops.vegetable": "Vegetables", "crops.flower": "Flowers",
@@ -209,7 +209,7 @@ var I18N = {
     "prod.method": "முறை", "prod.cropsFor": "{name} – பயிர் வாரியான பயன்கள்", "prod.all": "அனைத்து தயாரிப்புகள்",
 
     "crops.banner.title": "பயிர் வழிகாட்டி",
-    "crops.banner.lead": "தென்னை முதல் பூச்செடி வரை – இந்த வழிகாட்டியில் உள்ள ஒவ்வொரு பயிருக்கும் சரியான க்ரோஅக்ரி தயாரிப்பு.",
+    "crops.banner.lead": "இந்த வழிகாட்டியில் உள்ள ஒவ்வொரு பயிருக்கும் சரியான க்ரோஅக்ரி தயாரிப்பு.",
     "crops.search": "பயிரைத் தேடுங்கள்…",
     "crops.all": "அனைத்தும்", "crops.field": "வயல் பயிர்கள்", "crops.plantation": "தோட்டப் பயிர்கள்",
     "crops.vegetable": "காய்கறிகள்", "crops.flower": "பூக்கள்",

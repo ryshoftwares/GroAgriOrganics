@@ -555,7 +555,6 @@
     });
     var s = $("#crop-search");
     s.addEventListener("input", function () { cg.q = s.value; renderCropGuide(); });
-    var pb = $(".print-btn"); if (pb) pb.addEventListener("click", function () { $all(".reveal").forEach(function (e) { e.classList.add("visible"); }); print(); });
     renderCropGuide();
     Lang.on(renderCropGuide);
     if (location.hash) {
