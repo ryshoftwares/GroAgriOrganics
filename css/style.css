@@ -273,7 +273,7 @@ html[data-lang="ta"] .hero h1 { font-size: clamp(34px, 5.2vw, 66px); line-height
 /* ---------- Cuboid product pack ---------- */
 .pack {
   --w: 196px; --h: calc(var(--w) * 1.438); --d: calc(var(--w) * .3);
-  --c: #1f5a2e; --a: #e8c24a;
+  --c: #124c37; --a: #e1c06a;
   position: absolute; inset: 0; width: var(--w); height: var(--h); transform-style: preserve-3d;
 }
 .stage .pack, .ring .pack { --w: inherit; }
@@ -356,7 +356,7 @@ html[data-lang="ta"] .hero h1 { font-size: clamp(34px, 5.2vw, 66px); line-height
 /* product range cards (3D tilt) */
 .tilt { transform-style: preserve-3d; transition: transform .6s var(--ease); will-change: transform; }
 .prod-card {
-  --c: #1f5a2e; --a: #e8c24a;
+  --c: #124c37; --a: #e1c06a;
   position: relative; border-radius: var(--radius-lg); overflow: hidden; color: #fff; isolation: isolate;
   background:
     radial-gradient(120% 70% at 50% 0%, color-mix(in srgb, var(--c) 55%, #fff) 0%, transparent 60%),

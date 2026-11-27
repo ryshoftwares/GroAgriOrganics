@@ -167,7 +167,6 @@ function productPage(p) {
     "<tr><th>" + t("prod.mfgBy") + "</th><td>" + esc(COMPANY.manufacturer) + "</td></tr>" +
     "<tr><th>" + t("prod.mktBy") + "</th><td>" + esc(COMPANY.marketer) + "</td></tr>" +
     "<tr><th>" + esc(t("prod.licence")) + "</th><td>" + esc(COMPANY.licence) + "</td></tr>" +
-    "<tr><th>" + t("prod.care") + '</th><td><a href="' + COMPANY.phoneHref + '">' + esc(COMPANY.phone) + "</a></td></tr>" +
     "</tbody></table>\n" +
     "      </div>\n    </div></section>\n" +
     '    <section class="section pd-crops" style="--c:' + p.color + '"><div class="container">\n' +

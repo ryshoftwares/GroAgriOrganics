@@ -25,8 +25,8 @@ var PRODUCTS = [
     },
     name: "Coco Gold",
     image: "images/packs/coco-gold.jpg",
-    color: "#1f5a2e",
-    accent: "#e8c24a",
+    color: "#124c37",
+    accent: "#e1c06a",
     tag: { en: "Plant Promoter", ta: "Plant Promoter" },
     type: {
       en: "Coconut Special Organic Liquid Fertilizer",
@@ -48,8 +48,8 @@ var PRODUCTS = [
     },
     name: "Root Max",
     image: "images/packs/root-max.jpg",
-    color: "#7a4a1e",
-    accent: "#f0c75e",
+    color: "#124c37",
+    accent: "#e1c06a",
     tag: { en: "Organic Growth Enhancer", ta: "Organic Growth Enhancer" },
     type: {
       en: "Root Growth Promoter · Liquid Organic Fertilizer",
@@ -71,8 +71,8 @@ var PRODUCTS = [
     },
     name: "Grovia",
     image: "images/packs/grovia.jpg",
-    color: "#0f5e52",
-    accent: "#f2a33a",
+    color: "#124c37",
+    accent: "#e1c06a",
     tag: { en: "Soil & Crop Enhancer", ta: "Soil & Crop Enhancer" },
     type: {
       en: "Soil & Crop Promoter · Liquid Organic Fertilizer",
@@ -94,8 +94,8 @@ var PRODUCTS = [
     },
     name: "LF-21",
     image: "images/packs/lf-21.jpg",
-    color: "#5b2b8f",
-    accent: "#ff5a7a",
+    color: "#124c37",
+    accent: "#e1c06a",
     tag: { en: "Leaf Feed – Flowering", ta: "Leaf Feed – Flowering" },
     type: {
       en: "Foliar Liquid Fertilizer · Flowering Stage",

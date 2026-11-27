@@ -452,7 +452,6 @@
         "<tr><th>" + esc(t("prod.mfgBy")) + "</th><td>" + esc(COMPANY.manufacturer) + "</td></tr>" +
         "<tr><th>" + esc(t("prod.mktBy")) + "</th><td>" + esc(COMPANY.marketer) + "</td></tr>" +
         "<tr><th>" + esc(t("prod.licence")) + "</th><td>" + esc(COMPANY.licence) + "</td></tr>" +
-        "<tr><th>" + esc(t("prod.care")) + '</th><td><a href="' + COMPANY.phoneHref + '">' + esc(COMPANY.phone) + "</a></td></tr>" +
         "</tbody></table>" +
         (PRODUCT_ID ? "" :
         '<div class="pd-block" style="margin-top:28px"><h4>' + esc(t("prod.crops")) + '</h4><div class="crop-tags">' +
