@@ -227,7 +227,7 @@ html[data-lang="ta"] .hero h1 { font-size: clamp(34px, 5.2vw, 66px); line-height
 @keyframes goldflow { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
 .hero .lead { color: rgba(238, 244, 239, .82); margin-bottom: 36px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
-.trust-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 44px; }
+.trust-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-top: 0; }
 .trust-item { display: flex; align-items: center; gap: 10px; font-size: 13px; color: rgba(247, 236, 198, .85); max-width: 230px; line-height: 1.35; }
 .trust-item img { width: 40px; height: 40px; object-fit: contain; border-radius: 8px; background: #fff; padding: 2px; flex: none; }
 .trust-item .seal {
