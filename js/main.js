@@ -86,7 +86,7 @@
       '<div><h4 data-i18n="footer.contact"></h4><ul>' +
       '<li data-i18n-html="contact.addressVal"></li>' +
       '<li><a href="' + COMPANY.phoneHref + '">' + esc(COMPANY.phone) + "</a></li>" +
-      '<li><a href="https://' + COMPANY.web + '" target="_blank" rel="noopener">' + esc(COMPANY.web) + "</a></li>" +
+      '<li><a href="mailto:' + COMPANY.email + '">' + esc(COMPANY.email) + "</a></li>" +
       "</ul></div></div>" +
       '<div class="footer-bottom">© <span id="year"></span> GROAGRI ORGANICS. <span data-i18n="footer.rights"></span></div></footer>' +
       '<a href="https://wa.me/' + COMPANY.whatsapp + '" class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">' + I.wa + "</a>";
@@ -571,24 +571,60 @@
     var sel = $("#product"); if (!sel) return;
     var val = sel.value || new URLSearchParams(location.search).get("product") || "";
     sel.innerHTML = '<option value="">' + esc(t("form.general")) + "</option>" +
-      PRODUCTS.map(function (p) { return '<option value="' + esc(p.name) + '">' + esc(p.name + " – " + pick(p.type)) + "</option>"; }).join("");
+      PRODUCTS.map(function (p) { return '<option value="' + esc(p.name) + '">' + esc(p.name) + "</option>"; }).join("");
     sel.value = val;
   }
   function initContact() {
     var form = $("#enquiry-form"); if (!form) return;
     renderContactSelect(); Lang.on(renderContactSelect);
+    var phone = $("#phone"), btn = form.querySelector('button[type="submit"]'),
+        ok = $("#form-success"), err = $("#form-error");
+    function checkPhone() {
+      phone.setCustomValidity(/^[6-9]\d{9}$/.test(phone.value) ? "" : t("form.phone.err"));
+    }
+    phone.addEventListener("input", function () {
+      // Keep digits only, drop a leading +91 / 0, cap at 10 digits
+      var v = phone.value.replace(/\D/g, "");
+      if (v.length > 10) v = v.replace(/^(91|0)/, "");
+      phone.value = v.slice(0, 10);
+      checkPhone();
+    });
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      checkPhone();
+      if (!form.reportValidity()) return;
       var d = new FormData(form);
-      var msg = "Hello GROAGRI ORGANICS,\n\n" +
-        "Name: " + d.get("name") + "\n" +
-        "Phone: " + d.get("phone") + "\n" +
-        "Location: " + (d.get("location") || "-") + "\n" +
-        "Product: " + (d.get("product") || "General enquiry") + "\n" +
-        "Message: " + (d.get("message") || "-");
-      window.open(waLink(msg), "_blank", "noopener");
-      $("#form-success").style.display = "block";
-      form.reset();
+      var label = btn.querySelector("span");
+      ok.style.display = err.style.display = "none";
+      btn.disabled = true; label.textContent = t("form.sending");
+      fetch("https://formsubmit.co/ajax/" + COMPANY.email, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          _subject: "New enquiry from " + d.get("name") + " – GROAGRI ORGANICS website",
+          _template: "table",
+          _captcha: "false",
+          Name: d.get("name"),
+          Phone: "+91 " + d.get("phone"),
+          Location: d.get("location") || "-",
+          Product: d.get("product") || "General enquiry",
+          Message: d.get("message") || "-"
+        })
+      }).then(function (r) { return r.json().then(function (j) {
+        if (!r.ok || String(j.success) !== "true") throw new Error(j.message || "Send failed");
+      }); }).then(function () {
+        ok.style.display = "block";
+        form.reset();
+      }).catch(function (ex) {
+        console.error("Enquiry send failed:", ex);
+        var why = ex && ex.message ? ex.message : "";
+        if (location.protocol === "file:")
+          why = "Open the site through a web server (http://localhost…), not as a file.";
+        err.textContent = t("form.error") + (why ? " (" + why + ")" : "");
+        err.style.display = "block";
+      }).then(function () {
+        btn.disabled = false; label.textContent = t("form.submit");
+      });
     });
   }
 

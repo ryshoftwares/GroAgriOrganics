@@ -6,6 +6,7 @@ var COMPANY = {
   phone: "+91 8925184969",
   phoneHref: "tel:+918925184969",
   whatsapp: "918925184969",
+  email: "groagriorganics@gmail.com",
   web: "www.groagriorganics.in",
   licence: "க.எண். உரம்1/95384/2026",
   manufacturer: "Mazhaithuli Organics",
