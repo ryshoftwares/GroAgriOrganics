@@ -169,8 +169,6 @@ function productPage(p) {
     "<tr><th>" + esc(t("prod.licence")) + "</th><td>" + esc(COMPANY.licence) + "</td></tr>" +
     "<tr><th>" + t("prod.care") + '</th><td><a href="' + COMPANY.phoneHref + '">' + esc(COMPANY.phone) + "</a></td></tr>" +
     "</tbody></table>\n" +
-    '        <div class="pd-actions"><a class="btn btn-dark" href="contact.html?product=' + encodeURIComponent(p.name) + '">' + t("prod.enquire") + I.arrow + "</a>" +
-    '<a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/' + COMPANY.whatsapp + "?text=" + encodeURIComponent("Hello Groagri Organics, I would like to order " + p.name + " (1 L).") + '">' + I.wa + t("prod.wa") + "</a></div>\n" +
     "      </div>\n    </div></section>\n" +
     '    <section class="section pd-crops" style="--c:' + p.color + '"><div class="container">\n' +
     '      <div class="section-head"><h2>' + esc(t("prod.cropsFor", { name: p.name })) + "</h2></div>\n" +

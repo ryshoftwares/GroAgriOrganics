@@ -458,8 +458,6 @@
         '<div class="pd-block" style="margin-top:28px"><h4>' + esc(t("prod.crops")) + '</h4><div class="crop-tags">' +
         crops.map(function (c) { return '<a href="crop-guide.html#' + c.id + '"><img src="' + c.img + '" alt="" loading="lazy">' + esc(pick(c)) + "</a>"; }).join("") +
         "</div></div>") +
-        '<div class="pd-actions"><a class="btn btn-dark" href="contact.html?product=' + encodeURIComponent(p.name) + '">' + esc(t("prod.enquire")) + I.arrow + "</a>" +
-        '<a class="btn btn-wa" target="_blank" rel="noopener" href="' + waLink("Hello Groagri Organics, I would like to order " + p.name + " (1 L).") + '">' + I.wa + esc(t("prod.wa")) + "</a></div>" +
         "</div></div></section>" +
         (PRODUCT_ID ? cropUsesHTML(p, crops, lang) : "")
       );
