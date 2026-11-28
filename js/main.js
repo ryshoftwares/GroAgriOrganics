@@ -89,7 +89,16 @@
       '<li><a href="mailto:' + COMPANY.email + '">' + esc(COMPANY.email) + "</a></li>" +
       "</ul></div></div>" +
       '<div class="footer-bottom">© <span id="year"></span> GROAGRI ORGANICS. <span data-i18n="footer.rights"></span></div></footer>' +
-      '<a href="https://wa.me/' + COMPANY.whatsapp + '" class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">' + I.wa + "</a>";
+      '<a href="https://wa.me/' + COMPANY.whatsapp + '" class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">' + I.wa + "</a>" +
+      '<button type="button" class="to-top" aria-label="Back to top" title="Back to top">' +
+      '<svg viewBox="0 0 48 56" aria-hidden="true"><defs>' +
+      '<linearGradient id="ttLeaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fd16a"/><stop offset=".55" stop-color="#43a047"/><stop offset="1" stop-color="#1b5e20"/></linearGradient></defs>' +
+      '<path d="M24 52v-6" stroke="#2e7d32" stroke-width="3" stroke-linecap="round"/>' +
+      '<path d="M24 3C11 12 6.5 22.5 8.5 32.5 10.3 41 16.5 45.5 24 46.5c7.5-1 13.7-5.5 15.5-14C41.5 22.5 37 12 24 3z" fill="url(#ttLeaf)"/>' +
+      '<path d="M24 3C11 12 6.5 22.5 8.5 32.5c.6 3 1.8 5.5 3.4 7.4C9.5 28 15 16 24 3z" fill="#fff" fill-opacity=".18"/>' +
+      '<g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">' +
+      '<path d="M24 42V13M17.5 19.5L24 13l6.5 6.5" stroke-width="3"/>' +
+      '<path d="M24 34l-7.5-5.5M24 34l7.5-5.5M24 27l-5-3.8M24 27l5-3.8" stroke-width="1.6" stroke-opacity=".7"/></g></svg></button>';
     document.body.insertAdjacentHTML("beforeend", footer);
     $("#year").textContent = new Date().getFullYear();
 
@@ -111,9 +120,11 @@
       a.addEventListener("click", function () { document.body.classList.remove("menu-open"); toggle.setAttribute("aria-expanded", "false"); });
     });
 
-    var header = $(".site-header"), bar = $(".scroll-progress");
+    var header = $(".site-header"), bar = $(".scroll-progress"), toTop = $(".to-top");
+    toTop.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" }); });
     function onScroll() {
       header.classList.toggle("scrolled", window.scrollY > 30);
+      toTop.classList.toggle("show", window.scrollY > innerHeight * 0.6);
       var h = document.documentElement.scrollHeight - innerHeight;
       bar.style.transform = "scaleX(" + (h > 0 ? Math.min(1, scrollY / h) : 0) + ")";
     }
