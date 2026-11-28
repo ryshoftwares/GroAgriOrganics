@@ -84,7 +84,7 @@
       PRODUCTS.map(function (p) { return '<li><a href="' + productUrl(p) + '">' + esc(p.name) + "</a></li>"; }).join("") +
       "</ul></div>" +
       '<div><h4 data-i18n="footer.contact"></h4><ul>' +
-      '<li data-i18n-html="contact.addressVal"></li>' +
+      '<li><strong style="display:block;color:#fff;font-weight:600">Groagri Organics</strong><span data-i18n-html="contact.addressVal"></span></li>' +
       '<li><a href="' + COMPANY.phoneHref + '">' + esc(COMPANY.phone) + "</a></li>" +
       '<li><a href="mailto:' + COMPANY.email + '">' + esc(COMPANY.email) + "</a></li>" +
       "</ul></div></div>" +
@@ -198,7 +198,7 @@
     var stage = $("#stage"); if (!stage) return;
     var ring = $(".ring", stage), nameEl = $(".stage-caption .name", stage), typeEl = $(".stage-caption .type", stage), dots = $(".stage-dots", stage);
     var angle = 0, vel = 0, target = null, dragging = false, hover = false, visible = true, front = -1;
-    var AUTO = reduceMotion ? 0 : -0.12;
+    var AUTO = reduceMotion ? 0 : -0.22;
 
     var slots = [], W = 196, spread = 1;
     function measure() { W = ring.offsetWidth || 196; spread = W < 170 ? 0.84 : 1; }
